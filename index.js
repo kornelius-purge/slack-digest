@@ -94,25 +94,23 @@ async function summariseWithClaude(channelName, messages) {
 
   const transcript = messages.join("\n");
 
-  const prompt = `You are a business assistant helping a VA stay on top of client communications.
+  const prompt = `You are a business assistant helping a VA stay on top of all team activity.
 
 Below is a Slack conversation from the channel "#${channelName}" from the past 24 hours.
 The messages may be in Norwegian or English — translate any Norwegian to English first, then analyse.
-
 Be concise. No fluff. Produce this exact structure:
 
 ## ✅ Asana Tasks
 - [ ] Task name — context in one line (Person, Due: date or TBD)
 
 ## 🔔 Follow-Ups
-- One line per item
+- One line per item (who needs to follow up with whom)
 
-## ❓ Open Questions
+## ❓ Open Questions / Decisions Needed
 - One line per item
 
 ## 📝 Summary
-Max 2 sentences.
-
+Max 2 sentences covering what was discussed.
 ---
 TRANSCRIPT:
 ---
