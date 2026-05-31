@@ -99,24 +99,22 @@ async function summariseWithClaude(channelName, messages) {
 Below is a Slack conversation from the channel "#${channelName}" from the past 24 hours.
 The messages may be in Norwegian or English — translate any Norwegian to English first, then analyse.
 
-Produce a structured digest with these sections:
+Be concise. No fluff. Produce this exact structure:
 
-## 📋 Asana Tasks to Create
-List every concrete task, deliverable, or action item mentioned. For each:
-- **Task:** [clear task title]
-  - Details: [brief context]
-  - Who: [client/person if mentioned]
-  - Due: [deadline if mentioned, else "Not specified"]
+## ✅ Asana Tasks
+- [ ] Task name — context in one line (Person, Due: date or TBD)
 
-## 🔔 Follow-Ups Required
-Things that need a reply, check-in, or acknowledgement from the team.
+## 🔔 Follow-Ups
+- One line per item
 
-## ❓ Open Questions / Pending Decisions
-Unresolved questions or decisions waiting on someone.
+## ❓ Open Questions
+- One line per item
 
-## 📝 General Summary
-2–4 sentences covering what was discussed overall.
+## 📝 Summary
+Max 2 sentences.
 
+---
+TRANSCRIPT:
 ---
 TRANSCRIPT:
 ${transcript}`;
