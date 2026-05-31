@@ -1,0 +1,15 @@
+{
+  "name": "slack-daily-digest",
+  "version": "1.0.0",
+  "description": "Daily Slack digest bot — translates Norwegian, summarises tasks with Claude, posts to VA channel",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js --now"
+  },
+  "dependencies": {
+    "node-cron": "^3.0.3",
+    "node-fetch": "^3.3.2"
+  }
+}
